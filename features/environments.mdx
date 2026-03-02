@@ -53,7 +53,7 @@ Global variables are available across all environments and collections. Use them
   </Tab>
   <Tab title="Use Global Variable">
     Reference global variables using the same `{{variableName}}` syntax:
-    ```
+    ```text
     {{baseUrl}}/api/{{apiVersion}}/users
     ```
   </Tab>
@@ -85,12 +85,12 @@ When you select that environment, `{{baseUrl}}` resolves to `http://localhost:30
 Variables work everywhere in your requests:
 
 ### URL
-```
+```text
 {{baseUrl}}/api/users/{{userId}}
 ```
 
 ### Headers
-```
+```http
 Authorization: Bearer {{authToken}}
 X-API-Key: {{apiKey}}
 ```

@@ -27,7 +27,7 @@ API Key authentication lets you send a custom header or query parameter with you
     </Steps>
 
     **Example configuration:**
-    ```
+    ```text
     Placement: Header
     Key: X-API-Key
     Value: {{apiKey}}
@@ -52,7 +52,7 @@ API Key authentication lets you send a custom header or query parameter with you
     </Steps>
 
     **Example configuration:**
-    ```
+    ```text
     Placement: Query Param
     Key: api_key
     Value: {{apiKey}}
@@ -83,13 +83,13 @@ Bearer Token authentication is commonly used for JWT-based APIs and OAuth 2.0 ac
 </Steps>
 
 **Example configuration:**
-```
+```text
 Type: Bearer Token
 Token: {{accessToken}}
 ```
 
 **Generated header:**
-```
+```http
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 ```
 
@@ -115,14 +115,14 @@ Basic Auth sends username and password credentials encoded in Base64.
 </Steps>
 
 **Example configuration:**
-```
+```text
 Type: Basic Auth
 Username: {{apiUsername}}
 Password: {{apiPassword}}
 ```
 
 **Generated header:**
-```
+```http
 Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=
 ```
 
@@ -165,7 +165,7 @@ Traditional OAuth 2.0 flow with browser-based authentication.
 </Steps>
 
 **Example configuration:**
-```
+```text
 Grant Type: Authorization Code
 Auth URL: https://provider.com/oauth/authorize
 Token URL: https://provider.com/oauth/token
@@ -222,7 +222,7 @@ Machine-to-machine authentication without user interaction.
 </Steps>
 
 **Example configuration:**
-```
+```text
 Grant Type: Client Credentials
 Token URL: https://provider.com/oauth/token
 Client ID: {{serviceClientId}}
@@ -252,7 +252,7 @@ LiteClient automatically manages OAuth 2.0 tokens:
 
 All authentication types support variable substitution:
 
-```
+```text
 API Key: {{apiKey}}
 Bearer Token: {{accessToken}}
 Username: {{username}}
